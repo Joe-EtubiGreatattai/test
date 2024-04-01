@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hack Your Browser</title>
+  <style>
+    body {
+      background-color: black;
+      color: #00ff00;
+      font-family: monospace;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .terminal {
+      border: 2px solid #00ff00;
+      padding: 10px;
+      height: 300px;
+      overflow-y: auto;
+      
+    }
+
+    .terminal-line {
+      margin: 0;
+      padding: 0;
+      animation: typewriter 1s steps(20) infinite alternate;
+    }
+
+    @keyframes typewriter {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+
+    .progress-bar {
+      background-color: #00ff00;
+      height: 20px;
+      animation: progress-bar-animation 5s linear infinite;
+    }
+
+    @keyframes progress-bar-animation {
+      0% {
+        width: 0%;
+      }
+      50% {
+        width: 100%;
+      }
+      100% {
+        width: 0%;
+      }
+    }
+
+    .hacked-heading {
+      font-family: monospace;
+      font-size: 2.5rem;
+      color: #00ff00;
+      text-shadow: 0 0 10px #00ff00;
+    }
+
+    .hacked-text {
+      position: relative;
+    }
+
+    .hacked-blink {
+      animation: blink 1s infinite;
+    }
+
+    @keyframes glitch {
+      0% {
+        transform: translate(0);
+      }
+      20% {
+        transform: translate(-5px,);
+      }
+      40% {
+        transform: translate(-5px);
+      }
+      60% {
+        transform: translate(5px);
+      }
+      80% {
+        transform: translate(5px);
+      }
+      100% {
+        transform: translate(0);
+      }
+    }
+
+    @keyframes blink {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+    }
+
+    #hourglass-container {
+     
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 9999;
+    }
+
+    #hourglass {
+      width: 50px;
+      height: 50px;
+      border: 5px solid #00ff00;
+      border-radius: 50%;
+      border-top-color: transparent;
+      animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 10px;
+      }
+
+      .terminal {
+        height: 200px;
+      }
+
+      .hacked-heading {
+        font-size: 1.5rem;
+      }
+
+      #hourglass {
+        width: 30px;
+        height: 30px;
+        border-width: 3px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center hacked-heading">
+      <span class="hacked-text">DO NOT CLOSE BROSWER, BROWESER COMPROMISED</span>
+      <span class="hacked-blink">_</span>
+    </h1>
+    <div id="progress-bar" class="progress mt-4">
+      <div class="progress-bar" role="progressbar"></div>
+    </div>
+    <div id="hacking-interface" class="terminal mt-4">
+      <pre>
+<span class="terminal-line">root@hackbox:~# initiating_browser_hack.sh</span>
+<span class="terminal-line">Establishing connection... [OK]</span>
+<span class="terminal-line">Bypassing security measures... [OK]</span>
+<span class="terminal-line">Fetching browser history...</span>
+<span class="terminal-line">Decrypting data packets...</span>
+<span class="terminal-line">Analyzing traffic patterns...</span>
+<span class="terminal-line">Injecting backdoor...</span>
+<span class="terminal-line">Accessing sensitive information...</span>
+      </pre>
+    </div>
+    <ul id="sensitive-data" class="mt-4">
+      <!-- Placeholder for browser history list -->
+    </ul>
+    <div id="message" class="text-center mt-8 hidden">
+      <!-- Placeholder for happy Easter message -->
+    </div>
+    <div id="decryption-container" style="display: none;">
+      <p id="decryption-text"></p>
+    </div>
+  </div>
+  <div id="hourglass-container">
+    <div id="hourglass"></div>
+  </div>
+  <!-- Include JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
