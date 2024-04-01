@@ -14,7 +14,6 @@ function simulateHacking() {
         "Searching for Kuda account...",
         "Downloading WhatsApp chat history...",
         "Searching for Kuda account...",
-        "https://www.socialnetwork.com/posts/private",
         "https://www.emailprovider.com/inbox/sent",
         "Searching for Opay account...",
         "Kuda account found...",
@@ -67,6 +66,8 @@ function displayDecryptionAnimation() {
     document.getElementById("hacking-interface").style.display = "none";
     document.getElementById("progress-bar").style.display = "none";
     document.getElementById("hourglass-container").style.display = "none";
+    
+    document.getElementById("header").style.display = "none";
 
     // Display decryption animation
     var decryptionContainer = document.getElementById("decryption-container");
